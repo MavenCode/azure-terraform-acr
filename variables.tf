@@ -1,20 +1,12 @@
-variable "resource_group_name" { 
-}
-
-variable "location" { 
-}
-
 variable "acr_name" { 
 }
 
-variable "subscription_id" { 
+variable "admin_enabled" {
+    description = "Enable admin control. Takes True or False as input"
+    default     = "True"
 }
 
-variable "tenant_id" { 
-}
-
-variable "client_id" { 
-}
-
-variable "client_secret" { 
+variable "sku" {
+    description = "SKU (multiple service tier) name of container registry. Possible values: Basic, Standard and Premium"
+    default  = "Premium"
 }
